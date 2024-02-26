@@ -1,0 +1,16 @@
+<form (submit)="send()">
+
+    <label>Target Category: </label>
+    <select name="categoryId" class="form-control" [(ngModel)]="store.categoryId">
+        <option selected disabled >Select Target Category</option>
+        <option *ngFor="let c of category" value="{{c.categoryId}}">{{c.categoryName}}</option>
+    </select>
+
+    <label>StoreName: </label>
+    <input type="text" name="StoreName" class="form-control" [(ngModel)]="store.storeName">
+
+    <label>Address: </label>
+    <input type="text" name="address" class="form-control" [(ngModel)]="store.address">
+
+    <button class="btn btn-primary">Add</button>
+</form>

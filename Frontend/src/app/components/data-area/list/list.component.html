@@ -1,0 +1,22 @@
+<div>
+
+    <select (change)="showStore($event)">
+        <option selected disabled>Select Target Category</option>
+        <option *ngFor="let c of category" value="{{c.categoryId}}">{{c.categoryName}}</option>
+    </select>
+
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>StoreName</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let s of store">
+                <td>{{s.storeName}}</td>
+                <td>{{s.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
